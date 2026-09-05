@@ -18,6 +18,8 @@ class Catalogo {
     libros: Libro[] = []
 
     private static instancia: Catalogo
+
+    private constructor() {}
     
     static obtenerInstancia(): Catalogo {
         if (!Catalogo.instancia) {

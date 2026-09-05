@@ -16,15 +16,7 @@ interface Usuario {
 
 class UsuarioEstudiante implements Usuario {
 
-    nombre: string
-    limitePrestamos: number
-    diasDevolucion: number
-
-    constructor(nombre: string, limitePrestamos: number, diasDevolucion: number) {
-        this.nombre = nombre
-        this.limitePrestamos = limitePrestamos
-        this.diasDevolucion = diasDevolucion
-    }
+    constructor(public nombre: string, public limitePrestamos: number, public diasDevolucion: number) {}
 
     detalles(): string {
         return `Estudiante, Nombre: ${this.nombre}, Límite de Préstamos: ${this.limitePrestamos}, Dias de Devolución: ${this.diasDevolucion}`
@@ -33,15 +25,7 @@ class UsuarioEstudiante implements Usuario {
 
 class UsuarioDocente implements Usuario {
 
-    nombre: string
-    limitePrestamos: number
-    diasDevolucion: number
-
-    constructor(nombre: string, limitePrestamos: number, diasDevolucion: number) {
-        this.nombre = nombre
-        this.limitePrestamos = limitePrestamos
-        this.diasDevolucion = diasDevolucion
-    }
+    constructor(public nombre: string, public limitePrestamos: number, public diasDevolucion: number) {}
 
     detalles(): string {
         return `Docente, Nombre: ${this.nombre}, Límite de Préstamos: ${this.limitePrestamos}, Días de Devolución: ${this.diasDevolucion}`
@@ -50,15 +34,7 @@ class UsuarioDocente implements Usuario {
 
 class UsuarioExterno implements Usuario {
 
-    nombre: string
-    limitePrestamos: number
-    diasDevolucion: number
-
-    constructor(nombre: string, limitePrestamos: number, diasDevolucion: number) {
-        this.nombre = nombre
-        this.limitePrestamos = limitePrestamos
-        this.diasDevolucion = diasDevolucion
-    }
+    constructor(public nombre: string, public limitePrestamos: number, public diasDevolucion: number) {}
 
     detalles(): string {
         return `Externo, Nombre: ${this.nombre}, Límite de Préstamos: ${this.limitePrestamos}, Días de Devolución: ${this.diasDevolucion}`
