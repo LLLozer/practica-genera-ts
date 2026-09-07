@@ -8,8 +8,8 @@
 // Definir una interfaz Observador (con el método de notificación) para que Libro dependa de esa interfaz y no de la clase 
 // Estadisticas concreta — así se pueden agregar otros observadores (alertas, panel de bibliotecario, etc.) sin modificar Libro.
 
-class Observador {
-    notificar(libro: Libro): void {}
+interface Observador {
+    notificar(libro: Libro): void
 }
 
 class Estadisticas implements Observador {
